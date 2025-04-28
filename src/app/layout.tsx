@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <header className="flex items-center bg-[#F9F9F7] text-[#555] font-bold border border-gray-200 rounded-md shadow-md">
           <div className="flex-1">
-            <Link href="/" className="h-14">
+            <Link href="/" className="h-14 duration-300 hover:brightness-105 active:brightness-95">
               <Image src={banner} alt="Linkway" className="h-18 object-cover object-[50%_35%] rounded-md" />
             </Link>
           </div>
@@ -48,7 +48,7 @@ export default function RootLayout({
           <div className="flex-1 hidden sm:flex"></div>
         </header>
 
-        <main className="h-full my-1 py-2 flex flex-col gap-2 justify-center items-center bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
+        <main className="w-full h-full my-1 px-2 py-2 flex flex-col gap-2 justify-center items-center bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
           {children}
         </main>
 
