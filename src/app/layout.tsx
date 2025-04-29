@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html className="" lang="en">
       <body
-        className={`max-w-[900px] mx-auto mt-2 px-2 bg-repeat bg-[#F9F9F7] ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`max-w-[900px] mx-auto mt-2 px-2 bg-repeat ${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(${background.src})`, backgroundSize: 'auto 300px'}}
       >
-        <header className="flex items-center bg-[#F9F9F7] text-[#555] font-bold border border-gray-200 rounded-md shadow-md">
+        <header className="flex items-center text-[#555] bg-[#F9F9F7] font-bold border border-gray-200 rounded-md shadow-md">
           <div className="flex-1">
             <Link href="/" className="h-14 duration-300 hover:brightness-105 active:brightness-95">
               <Image src={banner} alt="Linkway" className="h-18 object-cover object-[50%_35%] rounded-md" />
@@ -48,11 +48,11 @@ export default function RootLayout({
           <div className="flex-1 hidden sm:flex"></div>
         </header>
 
-        <main className="w-full h-full my-1 px-2 py-2 flex flex-col gap-2 justify-center items-center bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
+        <main className="w-full h-full my-1 px-2 py-2 flex flex-col gap-2 justify-center items-center text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
           {children}
         </main>
 
-        <footer className="mb-2 bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
+        <footer className="mb-2 text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
           <div className="p-2 flex justify-center items-center gap-5 text-sm text-gray-700 dark:text-gray-200">
             <p>© 2025 Linkway.</p>
             <p>Made by Heinrich Löwe.</p>
