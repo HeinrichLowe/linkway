@@ -53,7 +53,7 @@ export default function Home() {
           <Link 
             href={"/resumes"} 
             title="All my CVs" 
-            className="w-10 h-full px-3 bg-white border border-stone-400 rounded-r-full hover:brightness-95 active:brightness-90 duration-300"
+            className="w-10 h-full px-3 bg-white border-y border-r border-stone-400 rounded-r-full hover:brightness-95 active:brightness-90 duration-300"
           >
             <Image src={rightArrowIcon} alt="Altenatives CVs" className="w-auto h-full py-3" />
           </Link>
