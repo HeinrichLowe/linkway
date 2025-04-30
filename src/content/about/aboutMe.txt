@@ -1,0 +1,11 @@
+👋 Hello! I'm an aspiring Full Stack developer with a focus on Backend and Python. I'm committed to honing my skills and growing in the development field.
+
+💡 My knowledge includes Frontend technologies such as HTML, CSS, JavaScript, React, Next.js, TypeScript, TailwindCSS, and Bootstrap. I also explore agile development principles and version control practices with Git/GitHub.
+
+🔧 On the Backend, I’m familiar with Python, SQLAlchemy, Alembic, PostgreSQL, MySQL, Flask, FastAPI, Node.js, MongoDB, and Redis. I also have experience with Django and containerization tools like Docker. I'm eager to dive deeper into this universe, building robust and efficient systems.
+
+🚀 Although I'm just starting my journey, I'm determined to contribute to meaningful projects and learn from experienced professionals. I'm open to learning and collaboration opportunities, and I'm ready to take on challenges that help me grow as a developer.
+
+📚 Additionally, I'm always seeking learning resources and working on practical projects that allow me to expand my knowledge and apply my skills in real-world scenarios.
+
+If you're looking for a dedicated and enthusiastic developer to join your team or collaborate on interesting projects, I'm at your service!

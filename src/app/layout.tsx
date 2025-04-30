@@ -40,9 +40,9 @@ export default function RootLayout({
           </div>
 
           <nav className="flex-3 flex gap-4 justify-center items-center">
-            <Link href="/">Home</Link>
-            <Link href="/projects">Projects</Link>
-            <Link href="/about">About</Link>
+            <Link className="active:translate-y-1 duration-100" href="/">Home</Link>
+            <Link className="active:translate-y-1 duration-100" href="/projects">Projects</Link>
+            <Link className="active:translate-y-1 duration-100" href="/about">About</Link>
           </nav>
 
           <div className="flex-1 hidden sm:flex"></div>
@@ -52,10 +52,10 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="max-w-[900px] mx-auto mb-2 text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
-          <div className="p-2 flex justify-center items-center gap-5 text-sm text-gray-700 dark:text-gray-200">
-            <p>© 2025 Linkway.</p>
-            <p>Made by Heinrich Löwe.</p>
+        <footer className="max-w-[900px] mx-auto mb-2 p-4  text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
+          <div className="flex justify-center items-center gap-5 text-sm text-gray-700 dark:text-gray-200">
+            <p className="cursor-default">© 2025 Linkway</p>
+            <p className="cursor-default">Made by Heinrich Löwe</p>
             <Link href={"https://github.com/HeinrichLowe/linkway"} target="_blank" rel="noopener noreferrer" className="hover:underline"> 
               Code
             </Link>

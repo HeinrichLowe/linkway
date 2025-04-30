@@ -38,7 +38,7 @@ export default function Home() {
           <div className="w-full border-b border-stone-400"></div>
         </div>
 
-        <div className="max-w-96 my-2 flex w-full h-12 text-[#555] font-bold rounded-full shadow-md">
+        <div className="max-w-96 my-2 flex w-full h-12 text-[#555] font-bold rounded-full shadow-md active:translate-x-1 duration-100">
           <Link 
             href={"/files/cvs/test.pdf"}
             download={"test.pdf"} 

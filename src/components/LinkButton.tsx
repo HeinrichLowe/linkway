@@ -25,7 +25,7 @@ export default function LinkButton({ startIcon, href, name, value, func, endIcon
             href={href || ""}
             title={name}
             {...(href ? { target: "_blank", rel: "noopener noreferrer" } : {onClick: functions.find(f => f.funcName === func)?.func})}
-            className="max-w-96 px-4 flex items-center justify-between w-full h-12 bg-white font-bold border border-stone-400 rounded-full shadow-md hover:brightness-95 active:brightness-90 duration-300"
+            className="max-w-96 px-4 flex items-center justify-between w-full h-12 bg-white font-bold border border-stone-400 rounded-full shadow-md hover:brightness-95 active:translate-x-1 duration-100"
         >
                 <Image src={startIcon || ""} alt={name || "icon"} className="w-auto h-full py-3" />
                 <h5 className="flex-1 text-center">{buttonName}</h5>
