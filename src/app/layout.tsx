@@ -48,7 +48,7 @@ export default function RootLayout({
           <div className="flex-1 hidden sm:flex"></div>
         </header>
 
-        <main className="max-w-[900px] mx-auto my-1 px-2 py-2 flex flex-col gap-2 justify-center items-center text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
+        <main className="max-w-[900px] mx-auto my-1 px-6 py-2 flex flex-col gap-2 justify-center items-center text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md md:px-2">
           {children}
         </main>
 

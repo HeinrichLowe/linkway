@@ -34,7 +34,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="w-90">
+        <div className="max-w-90 w-full px-2 md:px-0">
           <div className="w-full border-b border-stone-400"></div>
         </div>
 
