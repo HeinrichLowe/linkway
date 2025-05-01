@@ -40,18 +40,18 @@ export default function Home() {
 
         <div className="max-w-96 my-2 flex w-full h-12 text-[#555] font-bold rounded-full shadow-md active:translate-x-1 duration-100">
           <Link 
-            href={"/files/cvs/test.pdf"}
-            download={"test.pdf"} 
-            title="Donload my CV - EN" 
+            href={"/files/cvs/Paulo_Henrique_Silva_Leão_-_EN_Resume.pdf"}
+            download={"Paulo_Henrique_Silva_Leão_-_EN_Resume.pdf"} 
+            title="Download my CV - EN" 
             className="w-full h-full px-4 flex justify-between items-center bg-white border border-stone-400 rounded-l-full hover:brightness-95 active:brightness-90 duration-300"
           >
             <Image src={resumeIcon} alt="Altenatives CVs" className="w-auto h-full py-3 place-self-end" />
             <span>Download my CV</span>
             <Image src={downloadIcon} alt="Altenatives CVs" className="w-auto h-full py-2 place-self-end" />
-            </Link>
+          </Link>
             
           <Link 
-            href={"/resumes"} 
+            href={"/cvs"} 
             title="All my CVs" 
             className="w-10 h-full px-3 bg-white border-y border-r border-stone-400 rounded-r-full hover:brightness-95 active:brightness-90 duration-300"
           >
