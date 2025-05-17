@@ -12,7 +12,7 @@ export default function About() {
                     </p>
                 ))}
             </div>
-            
+
             <div className="max-w-prose w-full my-4 px-10">
                 <div className="w-full border-t"></div>
             </div>

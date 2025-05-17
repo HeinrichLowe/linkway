@@ -61,40 +61,19 @@ export default function ProjectsView({
                         )}
                     </div>
 
-                    <div className="mb-4 flex justify-center gap-10">
-                        {typeof project.links === "string" ? (
+                    {/* Links flexível */}
+                    <div className="mb-4 flex flex-wrap justify-center gap-4">
+                        {project.links.map((link, index) => (
                             <Link
-                                href={project.links}
+                                key={index}
+                                href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="underline lg:no-underline lg:hover:underline"
+                                className="flex gap-1 underline lg:no-underline lg:hover:underline"
                             >
-                                View Project Code
+                                {link.label} <svg className="w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             </Link>
-                        ) : (
-                            <>
-                                {project.links.back && (
-                                    <Link
-                                        href={project.links.back}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="underline lg:no-underline lg:hover:underline mr-4"
-                                    >
-                                        View Back-end Code
-                                    </Link>
-                                )}
-                                {project.links.front && (
-                                    <Link
-                                        href={project.links.front}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="underline lg:no-underline lg:hover:underline"
-                                    >
-                                        View Front-end Code
-                                    </Link>
-                                )}
-                            </>
-                        )}
+                        ))}
                     </div>
 
                     <div>
