@@ -5,8 +5,9 @@ export default function About() {
     return (
         <>
             <div className="max-w-prose">
-                <h1 className="mt-4 text-4xl text-center font-bold">About this Project</h1>
-                {aboutSite.map((text, index) => (
+                <h1 className="mt-4 text-4xl text-center font-bold">About Me</h1>
+                <br />
+                {aboutMe.map((text, index) => (
                     <p key={index} className="my-2">
                         {text}
                     </p>
@@ -18,8 +19,9 @@ export default function About() {
             </div>
 
             <div className="max-w-prose">
-                <h1 className="mb-4 text-4xl text-center font-bold">About Me</h1>
-                {aboutMe.map((text, index) => (
+                <h1 className="mt-4 text-4xl text-center font-bold">About this Project</h1>
+                <br />
+                {aboutSite.map((text, index) => (
                     <p key={index} className="my-2">
                         {text}
                     </p>
