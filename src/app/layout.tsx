@@ -52,7 +52,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="max-w-[900px] mx-auto mb-2 p-4  text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
+        <footer className="max-w-[900px] mx-auto p-4  text-[#555] bg-[#F9F9F7] border border-gray-200 rounded-md shadow-md">
           <div className="flex justify-center items-center gap-5 text-sm text-gray-700 dark:text-gray-200">
             <p className="cursor-default">© 2025 Linkway</p>
             <p className="cursor-default">Made by Heinrich Löwe</p>

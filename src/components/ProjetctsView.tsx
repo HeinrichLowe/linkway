@@ -4,8 +4,13 @@ import { useState } from "react";
 import { ProjectType } from "@/types/ProjectsType";
 import Image from "next/image";
 import Link from "next/link";
+import TechTag from "./TechTag";
 
-export default function ProjectsView({ projects }: { projects: ProjectType[] }) {
+export default function ProjectsView({
+    projects,
+}: {
+    projects: ProjectType[];
+}) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
 
@@ -23,9 +28,11 @@ export default function ProjectsView({ projects }: { projects: ProjectType[] }) 
         <div className="max-w-prose w-full px-2 lg:px-0">
             {projects.map((project, index) => (
                 <div key={index} className="mb-8">
-                    <h2 className="text-2xl text-center font-bold mb-2">{project.title}</h2>
+                    <h2 className="text-2xl text-center font-bold mb-2">
+                        {project.title}
+                    </h2>
                     <p className="mb-4">{project.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-4 mb-4 justify-center">
                         {Array.isArray(project.images) ? (
                             project.images.map((image, imgIndex) => (
@@ -46,25 +53,43 @@ export default function ProjectsView({ projects }: { projects: ProjectType[] }) 
                                 width={300}
                                 height={200}
                                 className="w-1/3 h-auto rounded-lg shadow-md cursor-pointer"
-                                onClick={() => typeof project.images === "string" && openModal(project.images)}
+                                onClick={() =>
+                                    typeof project.images === "string" &&
+                                    openModal(project.images)
+                                }
                             />
                         )}
                     </div>
 
                     <div className="mb-4 flex justify-center gap-10">
                         {typeof project.links === "string" ? (
-                            <Link href={project.links} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            <Link
+                                href={project.links}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline lg:no-underline lg:hover:underline"
+                            >
                                 View Project Code
                             </Link>
                         ) : (
                             <>
                                 {project.links.back && (
-                                    <Link href={project.links.back} target="_blank" rel="noopener noreferrer" className="hover:underline mr-4">
+                                    <Link
+                                        href={project.links.back}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="underline lg:no-underline lg:hover:underline mr-4"
+                                    >
                                         View Back-end Code
                                     </Link>
                                 )}
                                 {project.links.front && (
-                                    <Link href={project.links.front} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                    <Link
+                                        href={project.links.front}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="underline lg:no-underline lg:hover:underline"
+                                    >
                                         View Front-end Code
                                     </Link>
                                 )}
@@ -74,19 +99,20 @@ export default function ProjectsView({ projects }: { projects: ProjectType[] }) 
 
                     <div>
                         <h3 className="font-semibold">Technologies Used:</h3>
-                        <ul className="list-disc list-inside grid grid-cols-3">
+                        <div className="flex flex-wrap gap-2 mt-2 px-4">
                             {project.technologies.map((tech, techIndex) => (
-                                <li key={techIndex}>{tech}</li>
+                                <TechTag key={techIndex} tech={tech} />
                             ))}
-                        </ul>
+                        </div>
                     </div>
 
-                    {index < projects.length - 1 && 
+                    {index < projects.length - 1 && (
                         <div className="w-full flex justify-center">
+                            <br />
                             <br />
                             <div className="w-3/4 border-b-2"></div>
                         </div>
-                    }
+                    )}
                 </div>
             ))}
 
@@ -96,7 +122,7 @@ export default function ProjectsView({ projects }: { projects: ProjectType[] }) 
                     onClick={closeModal}
                 >
                     <div
-                        className="px-3 lg:px-0 lg:relative"
+                        className="max-h-screen px-3 lg:px-0 lg:py-2 overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Link href={currentImage} target="_blank" rel="noopener noreferrer">
