@@ -69,7 +69,7 @@ export const projects: ProjectType[] = [
   {
     title: "PetDevShop",
     description:
-      "PetDevShop is a web application built during the Node.js course offered by B7Web. It was one of my first projects using Node.js. The app simulates a pet shop, allowing users to browse and filter animals by category (Dog, Cat, or Fish) or search by name using a search bar.",
+      "PetDevShop is a web application built during the Node.js course offered by B7Web. It was one of my first projects using Node.js. The app simulates a pet shop, allowing users to browse and filter animals by category (Dog, Cat, or Fish) or search by breed using a search bar.",
     links: [
       {
         type: "fullstack",
