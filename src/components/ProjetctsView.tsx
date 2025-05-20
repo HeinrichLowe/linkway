@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProjectType } from "@/types/ProjectsType";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +13,15 @@ export default function ProjectsView({
 }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+        return () => document.body.classList.remove("overflow-hidden");
+    }, [isModalOpen]);
 
     const openModal = (image: string) => {
         setCurrentImage(image);
@@ -61,7 +70,7 @@ export default function ProjectsView({
                         )}
                     </div>
 
-                    {/* Links flexível */}
+                    {/* Projects Links */}
                     <div className="mb-4 flex flex-wrap justify-center gap-4">
                         {project.links.map((link, index) => (
                             <Link
@@ -85,6 +94,7 @@ export default function ProjectsView({
                         </div>
                     </div>
 
+                    {/* Separator */}
                     {index < projects.length - 1 && (
                         <div className="w-full flex justify-center">
                             <br />
@@ -97,11 +107,11 @@ export default function ProjectsView({
 
             {isModalOpen && currentImage && (
                 <div
-                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black/50 flex items-start justify-center z-50 overflow-y-auto"
                     onClick={closeModal}
                 >
                     <div
-                        className="max-h-screen px-3 lg:px-0 lg:py-2 overflow-y-auto"
+                        className="px-3 flex justify-center lg:px-0 lg:py-2 relative"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Link href={currentImage} target="_blank" rel="noopener noreferrer">
@@ -113,13 +123,13 @@ export default function ProjectsView({
                                 className="rounded-lg cursor-pointer"
                             />
                         </Link>
-                        <button
-                            onClick={closeModal}
-                            className="w-8 h-8 absolute top-1 right-1 text-white bg-red-500/75 rounded-full cursor-pointer"
-                        >
-                            ✕
-                        </button>
                     </div>
+                    <button
+                        onClick={closeModal}
+                        className="w-8 h-8 absolute top-1 right-1 text-white bg-red-500/75 rounded-full cursor-pointer"
+                    >
+                        ✕
+                    </button>
                 </div>
             )}
         </div>
