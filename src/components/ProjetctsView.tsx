@@ -107,11 +107,11 @@ export default function ProjectsView({
 
             {isModalOpen && currentImage && (
                 <div
-                    className="fixed inset-0 bg-black/50 flex items-start justify-center z-50 overflow-y-auto"
+                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 overflow-y-auto md:items-start"
                     onClick={closeModal}
                 >
                     <div
-                        className="px-3 flex justify-center lg:px-0 lg:py-2 relative"
+                        className="px-3 flex justify-center lg:px-0 md:py-2 relative"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Link href={currentImage} target="_blank" rel="noopener noreferrer">

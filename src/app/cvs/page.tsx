@@ -19,10 +19,10 @@ export default function CVs() {
                             <Link href={enResume} target="_black" rel="noopener noreferrer">
                                 <Image className="my-2 hover:brightness-95 active:translate-y-1 duration-200" src={enResumeImage} alt="Resume EN" />
                             </Link>
-                            <Link 
+                            <Link
                                 href={enResume}
-                                download={"Paulo_Henrique_Silva_Leão_-_EN_Resume.pdf"} 
-                                title="Download my EN resume" 
+                                download={"Paulo_Henrique_Silva_Leão_-_EN_Resume.pdf"}
+                                title="Download my EN resume"
                                 className="w-full px-4 py-1 text-center bg-white border border-stone-400 rounded-full hover:brightness-95 active:translate-y-1 duration-200"
                             >
                                 Download
@@ -36,10 +36,10 @@ export default function CVs() {
                             <Link href={brResume} target="_black" rel="noopener noreferrer">
                                 <Image className="my-2 hover:brightness-95 active:translate-y-1 duration-200" src={brResumeImage} alt="Resume EN" />
                             </Link>
-                            <Link 
+                            <Link
                                 href={brResume}
-                                download={"Paulo_Henrique_Silva_Leão_-_EN_Resume.pdf"} 
-                                title="Download my BR/PT resume" 
+                                download={"Paulo_Henrique_Silva_Leão_-_EN_Resume.pdf"}
+                                title="Download my BR/PT resume"
                                 className="w-full px-4 py-1 text-center bg-white border border-stone-400 rounded-full hover:brightness-95 active:translate-y-1 duration-200"
                             >
                                 Download
@@ -50,7 +50,9 @@ export default function CVs() {
             </div>
 
             <div className="">
-                CVs ...
+                {
+                    // "Future CVs versions will be available in this section."
+                }
             </div>
         </>
     )
